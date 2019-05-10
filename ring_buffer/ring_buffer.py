@@ -14,11 +14,11 @@ class RingBuffer:
         self.current += 1
 
   def get(self):
-    get_storage = []
-    for i in self.storage:
-        if i is None:
-            pass
-        else:
-            get_storage.append(i)
-    return get_storage
+    return [item for item in self.storage if item is not None]
+    # for i in self.storage:
+    #     if i is None:
+    #         pass
+    #     else:
+    #         get_storage.append(i)
+    # return get_storage
   
